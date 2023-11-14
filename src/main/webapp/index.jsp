@@ -7,9 +7,9 @@
 <html>
 <%
     List<Customer> list = Arrays.asList(
-      new Customer("Nguyen Van A", "15/10/2000","Ha Noi","image/image1.png"),
-      new Customer("Nguyen Van B", "23/8/2001","Hai Phong","image/image2.png"),
-      new Customer("Tran Van C", "25/05/2001","Bac Ninh","image/image3.png")
+      new Customer("Nguyen Van A", "2000-11-11","Ha Noi","/image/image1.jpg"),
+      new Customer("Nguyen Van B", "2001-08-15","Hai Phong","/image/image2.jpg"),
+      new Customer("Tran Van C", "1995-12-25","Bac Ninh","/image/image3.jpg")
     );
 %>
 <head>
@@ -34,7 +34,7 @@
         <c:forEach items="<%=list%>" var="customer" varStatus="loop">
             <tr>
                 <th >${customer.name}</th>
-                <td>${customer.ngaySinh.toLocaleString()}</td>
+                <td>${customer.ngaySinh}</td>
                 <td>${customer.diaChi}</td>
                 <td><img src="${customer.img}" alt="img" width="50px"></td>
             </tr>

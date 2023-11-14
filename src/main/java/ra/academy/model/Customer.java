@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Customer {
     private String name;
-    private Date ngaySinh;
+    private String ngaySinh;
     private String diaChi;
     private String img;
 
@@ -13,7 +13,7 @@ public class Customer {
 
     public Customer(String name, String ngaySinh, String diaChi, String img) {
         this.name = name;
-        this.ngaySinh = new Date(ngaySinh);
+        this.ngaySinh = ngaySinh;
         this.diaChi = diaChi;
         this.img = img;
     }
@@ -26,11 +26,11 @@ public class Customer {
         this.name = name;
     }
 
-    public Date getNgaySinh() {
+    public String getNgaySinh() {
         return ngaySinh;
     }
 
-    public void setNgaySinh(Date ngaySinh) {
+    public void setNgaySinh(String ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
 
